@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile">
+                <img src="profile.jpg" alt="Your Name" class="profile-img">
+                <h1>Abhishek Tupe</h1>
+                <p>Web Developer | Software Designer | Creator</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#upcoming">Upcoming</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Hello! I'm a passionate developer with experience in web technologies. I love creating interactive and user-friendly applications that solve real-world problems.</p>
+                <p>When I'm not coding, you can find me writing blogs, contributing to open source, or exploring new technologies.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/abhishek-tupe-sof27?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Abhi-tupe" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/AbhishekTu30497?t=gIEMI2qTK1H5p5Ule09sdA&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="project1.jpg" alt="Project 1">
+                        <h3>Stock Market Trend & Volatility Analyzer</h3>
+                        <p>A Python-based tool that predicts stock price trends, estimates trend duration, analyzes volatility, and factors in news sentiment .
+
+.</p>
+                        <a href="https://github.com/Abhi-tupe/Stock-Market-Prediction" class="btn">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="project2.jpg" alt="Project 2">
+                        <h3>Secure Two Way chat Servers</h3>
+                        <p>A Python-based encrypted chat system that enables two-way real-time communication between clients over a network. Designed to demonstrate secure client-server messaging using socket programming, the project showcases foundational concepts in networking, encryption, and multi-threading.</p>
+                        <a href="https://github.com/Abhi-tupe/Secure-two-way-messaging-servers" class="btn">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="project3.jpg" alt="Project 3">
+                        <h3>Project 3</h3>
+                        <p>Description of your third project and challenges you faced.</p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="upcoming" class="section">
+            <div class="container">
+                <h2>Upcoming Projects</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>AI-Powered App</h3>
+                            <p>Developing an application that uses machine learning to analyze user behavior.</p>
+                            <span class="date">Coming Soon - 2024</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Open Source Contribution</h3>
+                            <p>Planning to contribute to major open source projects in the JavaScript ecosystem.</p>
+                            <span class="date">Q2 2024</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Tech Blog Series</h3>
+                            <p>Starting a blog series about modern web development practices.</p>
+                            <span class="date">Monthly from 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="section">
+            <div class="container">
+                <h2>Latest Blog Posts</h2>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <img src="blog1.jpg" alt="Blog Post 1">
+                        <h3>Understanding React Hooks</h3>
+                        <p class="meta">Posted on January 15, 2024</p>
+                        <p>A deep dive into React Hooks and how they can simplify your components.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </article>
+                    <article class="blog-card">
+                        <img src="blog2.jpg" alt="Blog Post 2">
+                        <h3>CSS Grid vs Flexbox</h3>
+                        <p class="meta">Posted on December 5, 2023</p>
+                        <p>When to use CSS Grid and when Flexbox is the better option for your layouts.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </article>
+                </div>
+                <div class="view-all">
+                    <a href="#" class="btn">View All Blog Posts</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/abhishek-tupe-sof27?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/Abhi-tupe" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                                        
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+            <div class="back-to-top">
+                <a href="#"><i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
