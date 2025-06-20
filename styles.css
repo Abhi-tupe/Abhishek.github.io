@@ -1,4 +1,4 @@
-/* Global Styles */
+
 :root {
     --primary-color: #3498db;
     --secondary-color: #2c3e50;
@@ -67,7 +67,7 @@ body {
     margin: 15px auto;
 }
 
-/* Header Styles */
+
 header {
     background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     color: white;
@@ -120,7 +120,6 @@ nav ul li a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* About Section */
 .social-links {
     margin-top: 30px;
     display: flex;
@@ -139,7 +138,6 @@ nav ul li a:hover {
     transform: translateY(-3px);
 }
 
-/* Projects Section */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -182,7 +180,7 @@ nav ul li a:hover {
     text-align: center;
 }
 
-/* Upcoming Projects */
+
 .timeline {
     position: relative;
     max-width: 800px;
@@ -256,7 +254,7 @@ nav ul li a:hover {
     left: -10px;
 }
 
-/* Blog Section */
+
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -310,7 +308,7 @@ nav ul li a:hover {
     margin-top: 40px;
 }
 
-/* Contact Section */
+
 #contact {
     background: var(--light-color);
 }
@@ -359,7 +357,7 @@ nav ul li a:hover {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
+
 footer {
     background: var(--secondary-color);
     color: white;
@@ -394,7 +392,7 @@ footer {
     font-size: 1.5rem;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .timeline::before {
         left: 30px;
