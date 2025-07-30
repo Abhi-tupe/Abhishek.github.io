@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
+
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -13,8 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-    
-    // Show/hide back to top button
+
     const backToTopButton = document.querySelector('.back-to-top');
     
     window.addEventListener('scroll', function() {
@@ -24,29 +23,47 @@ document.addEventListener('DOMContentLoaded', function() {
             backToTopButton.classList.remove('active');
         }
     });
-    
-    // Form submission
+
     const contactForm = document.getElementById('contact-form');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send the form data to a server
-            // For now, we'll just log it and show an alert
-            console.log({ name, email, message });
-            
-            alert('Thank you for your message! I will get back to you soon.');
-            contactForm.reset();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                alert("⚠️ Please fill all fields.");
+                return;
+            }
+
+            try {
+                const response = await fetch("/submit_contact", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ name, email, message })
+                });
+
+                const result = await response.json();
+
+                if (result.status === "success") {
+                    alert("✅ Message stored successfully!");
+                    contactForm.reset();
+                } else {
+                    alert("⚠️ Something went wrong. Please try again.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("❌ Server error. Please try later.");
+            }
         });
     }
-    
-    // Animate sections when they come into view
+
     const sections = document.querySelectorAll('.section');
     
     const observerOptions = {
@@ -66,10 +83,11 @@ document.addEventListener('DOMContentLoaded', function() {
         section.classList.add('hidden');
         observer.observe(section);
     });
-    
-    // Add animation classes
+
     setTimeout(() => {
-        document.querySelector('.profile-img').classList.add('animate');
+        const profileImg = document.querySelector('.profile-img');
+        if (profileImg) profileImg.classList.add('animate');
+        
         document.querySelector('header h1').classList.add('animate');
         document.querySelector('header p').classList.add('animate');
     }, 500);
