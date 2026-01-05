@@ -428,3 +428,72 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+.week-card {
+  background: #f7f8f8;
+  border-left: 4px solid #3498db;
+  padding: 20px;
+  border-radius: 8px;
+}
+.week-date {
+  color: #888;
+  font-size: 0.9rem;
+}
+/* ===== This Week Section ===== */
+
+.week-select {
+  background: #3498db;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.week-card {
+  background: #f6f6f6;
+  border-left: 4px solid #3498db;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.week-card h3 {
+  margin-top: 18px;
+  color: #3498db;
+}
+
+.week-card ul {
+  padding-left: 18px;
+}
+
+.week-card li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.fade {
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Match hover behavior of other sections */
+.week-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.week-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 255, 213, 0.12);
+}
+
